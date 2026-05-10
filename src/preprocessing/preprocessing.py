@@ -71,7 +71,7 @@ def clean_cu_data(df):
     
     # Replace fake values with NaN
     # e.g., sensor.aqara_wireless_switch_pid_081_action → mean = -9.68
-    # df.replace([-9.21, -9.68, -9.7, -9.81], pd.NA, inplace=True)
+    df.replace([-9.21, -9.68, -9.7, -9.81], pd.NA, inplace=True)
     
     # separate timestamp
     # timestamp_col = None
@@ -92,7 +92,7 @@ def clean_cu_data(df):
     #     df.insert(0, "Timestamp", timestamp_col)
 
     df = df.dropna(axis=1, how="all")   # remove dead sensors
-    # df = df.fillna(method="ffill")      # or interpolate
+    df = df.fillna(method="ffill")      # or interpolate
     return df
 
 def downsample_data(df, downsample_freq):
