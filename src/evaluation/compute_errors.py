@@ -24,10 +24,10 @@ def create_evaluation_dataloaders(config):
     actor2_test_dataset = TimeSeriesDataset(arrays["actor2_test"], window_size)
     actor1_test_dataset = TimeSeriesDataset(arrays["actor1_test"], window_size)
     
-    train_loader = DataLoader(train_dataset, batch_size, shuffle=True)
-    val_loader = DataLoader(val_dataset, batch_size, shuffle=True)
-    actor2_test_loader = DataLoader(actor2_test_dataset, batch_size, shuffle=True)
-    actor1_test_loader = DataLoader(actor1_test_dataset, batch_size, shuffle=True)
+    train_loader = DataLoader(train_dataset, batch_size, shuffle=False)
+    val_loader = DataLoader(val_dataset, batch_size, shuffle=False)
+    actor2_test_loader = DataLoader(actor2_test_dataset, batch_size, shuffle=False)
+    actor1_test_loader = DataLoader(actor1_test_dataset, batch_size, shuffle=False)
 
     data_loaders = {
         "train_loader": train_loader,
