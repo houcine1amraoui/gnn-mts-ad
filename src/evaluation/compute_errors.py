@@ -109,10 +109,10 @@ def compute_raw_errors_all_splits(config):
                  "reconstruction": actor1_test_errors["reconstruction"]}
     else:
         train = {"forecast": train_errors["forecast"]}
-        val = {"forecast": val["forecast"]}
-        actor2_test = {"forecast": actor2_test["forecast"]}
-        actor1_test = {"forecast": actor1_test["forecast"]}
-        
+        val = {"forecast": val_errors["forecast"]}
+        actor2_test = {"forecast": actor2_test_errors["forecast"]}
+        actor1_test = {"forecast": actor1_test_errors["forecast"]}
+
     raw_errros = {
         "train": train,
         "val": val,
