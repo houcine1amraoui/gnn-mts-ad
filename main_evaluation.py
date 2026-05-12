@@ -25,8 +25,8 @@ def main_evaluation():
     # raw errors → normalize errors 
     # → scores (aggregated errors per timestamp) → smoothed scores
     # → metrics (point-wise)
-    compute_errors(config)
-    compute_scores(config)
+    # compute_errors(config)
+    # compute_scores(config)
     compute_point_wise_metrics(config)
     # compute_segment_wise_metrics(config)
 
